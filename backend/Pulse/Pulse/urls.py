@@ -20,5 +20,6 @@ from oauth2_provider import urls as oauth2_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/auth', include(oauth2_urls)),
+    path('api/auth/', include(oauth2_urls)),
+    path('api/users/', include('users.urls')),
 ]
